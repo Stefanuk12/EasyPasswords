@@ -1,9 +1,9 @@
 // Dependencies
-import { PasswordManager, IPasswordCheck, PasswordStrength } from "../src/modules/PasswordManager";
+import { PasswordManager, IPasswordCheckReturn, PasswordStrength } from "../src/modules/PasswordManager";
 
 // Vars
 interface ITestPasswords { 
-    [key: string]: IPasswordCheck
+    [key: string]: IPasswordCheckReturn
 }
 const TestPasswords: ITestPasswords = {
     "aSD7V^&*gS77+": {Score: 38, Strength: PasswordStrength.Strong},
@@ -28,4 +28,26 @@ for (const TestPassword in TestPasswords){
 }
 
 //
-console.log(`Check Test passed!`)
+console.log("Check Test passed!")
+
+// Loop three times
+for (let i = 0; i < 3; i++){
+    // Generate a password
+    const _Password = new PasswordManager.Password()
+
+    // Check the password, and make sure the results are as expected
+    const Result = _Password.check()
+    if (Result.Score < 20 && Result.Strength != PasswordStrength.Strong){
+        // Output
+        console.error(`Generate Test failed (${_Password.text}) - Expected: 2 (> 20) - Got: ${Result.Strength} (${Result.Score})`)
+
+        // Exit
+        process.exit(1)
+    }
+}
+
+//
+console.log("Generate Test passed!")
+
+//
+console.log("All tests passed!")

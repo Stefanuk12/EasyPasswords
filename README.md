@@ -4,7 +4,16 @@ A simple and open-source password generator and checker, built in Typescript (an
 
 ## Basic Features
 - [x] Password Checker
-- [ ] Password Generator
+- [x] Password Generator
+- [ ] Menu
+
+## Menu
+
+### Features
+It'll be very simple, just a way to do the following:
+- Check a password
+- Generate a password
+- Quit
 
 ## Password Checker Criteria
 All of the following is configurable, and dictates how a "password score" is made.

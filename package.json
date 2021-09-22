@@ -20,6 +20,10 @@
   },
   "homepage": "https://github.com/Stefanuk12/EasyPasswords#readme",
   "devDependencies": {
-    "@types/node": "^16.9.6"
+    "@types/node": "^16.9.6",
+    "@types/readline-sync": "^1.4.4"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }

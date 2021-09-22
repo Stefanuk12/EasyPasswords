@@ -33,21 +33,39 @@ export interface IRegexTests {
 
 export interface IPassed {
     //
-    [key: string]: boolean,
+    [key: string]: boolean | undefined,
 
     //
-    Uppercase: boolean,
-    Lowercase: boolean,
-    Digit: boolean,
-    Symbol: boolean,
+    Uppercase?: boolean,
+    Lowercase?: boolean,
+    Digit?: boolean,
+    Symbol?: boolean,
 }
 
-export interface IPasswordCheck {
+export interface IPasswordCheckReturn {
     Score: number,
     Strength: PasswordStrength
 }
 
-//
+export interface IGenerateOptions extends IPassed {}
+
+export interface IGenerateReturn {
+    text: string
+    strength: PasswordStrength
+    score: number
+}
+
+export interface ICharacterSet {
+    //
+    [Symbol.iterator](): IterableIterator<string>;
+
+    //
+    Uppercase: string,
+    Lowercase: string,
+    Digit: string,
+    Symbol: string
+}
+
 export namespace PasswordManager {
     // Vars
     const QWERTYKeyboard = [
@@ -55,6 +73,12 @@ export namespace PasswordManager {
         "asdfghjkl",
         "zxcvbnm"
     ]
+    const CharacterSets = {
+        Uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        Lowercase: "abcdefghijklmnopqrstuvwxyz",
+        Digit: "0123456789",
+        Symbol: "!$%^&*()-_=+"
+    }
     const RegexTests: IRegexTests = {
         Uppercase: /[A-Z]/,
         Lowercase: /[a-z]/,
@@ -82,20 +106,40 @@ export namespace PasswordManager {
 
         // Vars
         text: string
+        strength: PasswordStrength = PasswordStrength.Weak
+        score: number = 0
 
         // Constructor
-        constructor(text: string = ""){
-            // Set vars
-            this.text = (text == "") ? Password.generate() : text
+        constructor(text?: string){
+            // Check if not given any text
+            if (!text){
+                // Generate a random password
+                const generatedPassword = Password.generate()
+
+                // Set vars
+                this.text = generatedPassword.text
+                this.strength = generatedPassword.strength
+                this.score = generatedPassword.score
+            } else {
+                // Set text
+                this.text = text
+
+                // Vars
+                const checked = this.check()
+
+                // Set vars
+                this.strength = checked.Strength
+                this.score = checked.Score
+            }
         }
     
         // Check the strength
         check(scoreConversion: IScoreTable = Password.scoreTable){
             // Vars
-            let score: number = this.text.length
+            let score = this.text.length
             let strength: PasswordStrength
             let passed: string[] = []
-            let AllAboveTracker: boolean = true
+            let AllAboveTracker = true
 
             // Check against all of the criteria
             for (const [testType, tester] of Object.entries(RegexTests)){
@@ -146,7 +190,7 @@ export namespace PasswordManager {
             }
 
             // Return
-            const returnValue: IPasswordCheck = {
+            const returnValue: IPasswordCheckReturn = {
                 Score: score,
                 Strength: strength
             }
@@ -154,8 +198,53 @@ export namespace PasswordManager {
         }
 
         // Generate a password
-        static generate(){
-            return ""
+        static generate(options: IGenerateOptions = {Uppercase: true, Lowercase: true, Digit: true}){
+            // Vars
+            let _password: Password
+            const length: number = Math.floor(Math.random() * (12 - 8 + 1) + 8)
+            let characterSet = ""
+
+            // Get character set from options
+            for (const [name, set] of Object.entries(CharacterSets)){    
+                // Make sure is allowed within options
+                if (options[name]){
+                    // Add set onto current set
+                    characterSet += set
+                }       
+            }
+            const characterSetLength = characterSet.length
+
+            // Constant loop
+            let text = ""
+            let score: number
+            while (true){
+                // Reset Text
+                text = ""
+
+                //
+                for (let i = 0; i < length; i++){
+                    // Add random characters from set onto text
+                    text += characterSet.charAt(Math.floor(Math.random() * characterSetLength))
+                }
+
+                // Create password
+                _password = new Password(text)
+
+                // Check strength
+                if (_password.score > 20 && _password.strength == PasswordStrength.Strong){
+                    // Set score and break
+                    score = _password.score
+                    break
+                }
+            }
+
+            // Return password
+            const returnValue: IGenerateReturn = {
+                text: text,
+                strength: PasswordStrength.Strong,
+                score: score
+            }
+            return returnValue
         }
     }
 }
