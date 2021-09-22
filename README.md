@@ -30,3 +30,34 @@ If the password is only made up of the following, they would lose the configured
 | =< 0  | Weak     |
 | 1-20  | Medium   |
 | 21+   | Strong   |
+
+## Password Generator Criteria
+
+### Process
+- Generate a random number (8-12 characters long), this will be the length
+- Generate random sequence of alphanumeric characters, but also symbols if specified
+- Calculate the score for the password
+- Repeat the past few steps until the password is "strong"
+- Display password and point score
+- Return
+
+### Allowed characters
+- Letters
+- Digits
+- Symbols (only the allowed ones)
+
+#### Allowed Symbols
+- !
+- $
+- %
+- ^
+- &
+- *
+- (
+- )
+- -
+- _
+- =
+- +
+
+**The space character is not allowed**
