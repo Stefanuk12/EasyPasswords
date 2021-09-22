@@ -118,7 +118,7 @@ export namespace PasswordManager {
 
             // Check if only passes one test, and subtract how many points, depending on which
             if (passed.length == 1){
-                score -= scoreConversion[passed[0]]
+                score += scoreConversion[passed[0]]
             }
 
             // Loop through each characters in string
