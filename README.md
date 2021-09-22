@@ -23,3 +23,10 @@ If the password is only made up of the following, they would lose the configured
 - Digits
 - Symbols
 - Three consecutive characters
+
+### Score to Strength
+| Score | Strength |
+| ----- | -------- |
+| =< 0  | Weak     |
+| 1-20  | Medium   |
+| 21+   | Strong   |
