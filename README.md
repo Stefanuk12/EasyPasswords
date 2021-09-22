@@ -52,12 +52,12 @@ If the password is only made up of the following, they would lose the configured
 - %
 - ^
 - &
-- *
+- \*
 - (
 - )
-- -
+- \-
 - _
 - =
-- +
+- \+
 
 **The space character is not allowed**
