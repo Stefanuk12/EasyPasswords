@@ -1,0 +1,25 @@
+{
+  "name": "easypasswords",
+  "description": "A simple and open-source password generator and checker, built in Typescript (and possibly React, if I decide to add a GUI).\r - This project is for my GCSE Computer Science NEA",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stefanuk12/EasyPasswords.git"
+  },
+  "author": "Stefanuk12",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Stefanuk12/EasyPasswords/issues"
+  },
+  "homepage": "https://github.com/Stefanuk12/EasyPasswords#readme",
+  "devDependencies": {
+    "@types/node": "^16.9.6"
+  }
+}

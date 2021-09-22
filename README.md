@@ -3,7 +3,7 @@ A simple and open-source password generator and checker, built in Typescript (an
 - This project is for my GCSE Computer Science NEA
 
 ## Basic Features
-- [ ] Password Checker
+- [x] Password Checker
 - [ ] Password Generator
 
 ## Password Checker Criteria
@@ -22,7 +22,7 @@ If the password is only made up of the following, they would lose the configured
 - Lowercase and Uppercase characters
 - Digits
 - Symbols
-- Three consecutive characters
+- Three consecutive characters (on same UK QWERTY keyboard line)
 
 ### Score to Strength
 | Score | Strength |
