@@ -121,9 +121,9 @@ export namespace PasswordManager {
                 score -= scoreConversion[passed[0]]
             }
 
-            // Loop through each 3 characters in string
+            // Loop through each characters in string
             for (let i = 0; i < this.text.length; i++){
-                // Get past few characters
+                // Get next few characters
                 const nextChars = this.text.substring(i, i + 3).toLowerCase()
             
                 // Loop through each line in the qwerty keyboard
