@@ -16,9 +16,9 @@ It'll be very simple, just a way to do the following:
 - Quit
 
 ### Process
-- Constant while loop
-- Get user input, and decide which feature to execute
-- Depending on the feature either:
+1. Constant while loop
+2. Get user input, and decide which feature to execute
+3. Depending on the feature either:
     - Display the password's strength and score
     - Generate a password and display it, along with its score
     - Break out of the while loop (and quit the program)
@@ -51,12 +51,12 @@ If the password is only made up of the following, they would lose the configured
 ## Password Generator Criteria
 
 ### Process
-- Generate a random number (8-12 characters long), this will be the length
-- Generate random sequence of alphanumeric characters, but also symbols if specified
-- Calculate the score for the password
-- Repeat the past few steps until the password is "strong"
-- Display password and point score
-- Return
+1. Generate a random number (8-12 characters long), this will be the length
+2. Generate random sequence of alphanumeric characters, but also symbols if specified
+3. Calculate the score for the password
+4. Repeat the past few steps until the password is "strong"
+5. Display password and point score
+6. Return the generated password and point score
 
 ### Allowed characters
 - Letters
