@@ -5,7 +5,7 @@ A simple and open-source password generator and checker, built in Typescript (an
 ## Basic Features
 - [x] Password Checker
 - [x] Password Generator
-- [ ] Menu
+- [x] Menu
 
 ## Menu
 
