@@ -15,6 +15,14 @@ It'll be very simple, just a way to do the following:
 - Generate a password
 - Quit
 
+### Process
+- Constant while loop
+- Get user input, and decide which feature to execute
+- Depending on the feature either:
+    - Display the password's strength and score
+    - Generate a password and display it, along with its score
+    - Break out of the while loop (and quit the program)
+
 ## Password Checker Criteria
 All of the following is configurable, and dictates how a "password score" is made.
 
