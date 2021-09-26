@@ -1,0 +1,1 @@
+Just a simple way of allowing the user to exit the program.

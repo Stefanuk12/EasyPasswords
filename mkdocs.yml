@@ -1,0 +1,31 @@
+site_name: EasyPasswords Documentation
+docs_dir: 'src'
+site_dir: 'docs'
+nav:
+  - Home: index.md
+  - Analysis:
+    - Introduction: ./analysis/index.md
+    - Success Criteria:
+      - Menu: ./analysis/successcriteria/menu.md
+      - Password Checker: ./analysis/successcriteria/passwordchecker.md
+      - Password Generator: ./analysis/successcriteria/passwordgenerator.md
+      - Quit: ./analysis/successcriteria/quit.md
+    - Proposed Solution: ./analysis/proposedsolution.md
+  - Design:
+    - Functions:
+      - Index: ./design/functions/index.md
+    - Flowcharts:
+      - Index: ./design/flowcharts/index.md
+    - Pseudocode:
+      - Index: ./design/pseudocode/index.md
+    - Validation:
+      - Index: ./design/validation/index.md
+  - Testing: ./testing/index.md
+  - Evaluation: ./evaluation/index.md
+
+theme:
+  name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
