@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.0">
     
     
       
-        <title>EasyPasswords Documentation</title>
+        <title>Password Checker - EasyPasswords Documentation</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.fe914879.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe914879.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ba0d045b.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ba0d045b.min.css">
         
       
     
@@ -53,12 +53,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#checks" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -67,7 +72,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="EasyPasswords Documentation" class="md-header__button md-logo" aria-label="EasyPasswords Documentation" data-md-component="logo">
+    <a href="../../.." title="EasyPasswords Documentation" class="md-header__button md-logo" aria-label="EasyPasswords Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -86,7 +91,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Password Checker
             
           </span>
         </div>
@@ -151,7 +156,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="EasyPasswords Documentation" class="md-nav__button md-logo" aria-label="EasyPasswords Documentation" data-md-component="logo">
+    <a href="../../.." title="EasyPasswords Documentation" class="md-nav__button md-logo" aria-label="EasyPasswords Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -170,7 +175,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home
       </a>
     </li>
@@ -183,12 +188,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         Analysis
@@ -206,7 +213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/analysis/" class="md-nav__link">
+      <a href="../../" class="md-nav__link">
         Introduction
       </a>
     </li>
@@ -216,12 +223,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
         Success Criteria
@@ -239,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/analysis/successcriteria/menu/" class="md-nav__link">
+      <a href="../menu/" class="md-nav__link">
         Menu
       </a>
     </li>
@@ -249,11 +258,108 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="/analysis/successcriteria/passwordchecker/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Password Checker
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Password Checker
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    Checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#password-length" class="md-nav__link">
+    Password Length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowed-characters" class="md-nav__link">
+    Allowed characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowed-symbols" class="md-nav__link">
+    Allowed Symbols
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-calculation" class="md-nav__link">
+    Score Calculation
+  </a>
+  
+    <nav class="md-nav" aria-label="Score Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additions" class="md-nav__link">
+    Additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtractions" class="md-nav__link">
+    Subtractions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strength-determination" class="md-nav__link">
+    Strength Determination
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -263,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/analysis/successcriteria/passwordgenerator/" class="md-nav__link">
+      <a href="../passwordgenerator/" class="md-nav__link">
         Password Generator
       </a>
     </li>
@@ -275,7 +381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/analysis/successcriteria/quit/" class="md-nav__link">
+      <a href="../quit/" class="md-nav__link">
         Quit
       </a>
     </li>
@@ -293,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/analysis/proposedsolution/" class="md-nav__link">
+      <a href="../../proposedsolution/" class="md-nav__link">
         Proposed Solution
       </a>
     </li>
@@ -356,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/design/functions/" class="md-nav__link">
+      <a href="../../../design/functions/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -395,7 +501,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/design/flowcharts/" class="md-nav__link">
+      <a href="../../../design/flowcharts/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -434,7 +540,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/design/pseudocode/" class="md-nav__link">
+      <a href="../../../design/pseudocode/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -473,7 +579,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/design/validation/" class="md-nav__link">
+      <a href="../../../design/validation/" class="md-nav__link">
         Index
       </a>
     </li>
@@ -500,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/testing/" class="md-nav__link">
+      <a href="../../../testing/" class="md-nav__link">
         Testing
       </a>
     </li>
@@ -515,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/evaluation/" class="md-nav__link">
+      <a href="../../../evaluation/" class="md-nav__link">
         Evaluation
       </a>
     </li>
@@ -529,11 +635,186 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#checks" class="md-nav__link">
+    Checks
+  </a>
+  
+    <nav class="md-nav" aria-label="Checks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#password-length" class="md-nav__link">
+    Password Length
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowed-characters" class="md-nav__link">
+    Allowed characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowed-symbols" class="md-nav__link">
+    Allowed Symbols
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#score-calculation" class="md-nav__link">
+    Score Calculation
+  </a>
+  
+    <nav class="md-nav" aria-label="Score Calculation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#additions" class="md-nav__link">
+    Additions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subtractions" class="md-nav__link">
+    Subtractions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strength-determination" class="md-nav__link">
+    Strength Determination
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                  <h1>Password Checker</h1>
+                
+                <h2 id="checks">Checks</h2>
+<p>If the user fails the following checks, then an error message would be displayed.</p>
+<h4 id="password-length">Password Length</h4>
+<p>The length <strong>must</strong> be between <strong>8-24 characters</strong>.</p>
+<h4 id="allowed-characters">Allowed characters</h4>
+<p>The program <strong>must</strong> check whether the characters within the password are allowed. The following characters are allowed:</p>
+<ul>
+<li>Alphanumeric Characters</li>
+<li>Allowed Symbols (see below)</li>
+</ul>
+<h4 id="allowed-symbols">Allowed Symbols</h4>
+<p>If the user inputs any symbols, these are the allowed ones.</p>
+<ul>
+<li>!</li>
+<li>$</li>
+<li>%</li>
+<li>^</li>
+<li>&amp;</li>
+<li>*</li>
+<li>(</li>
+<li>)</li>
+<li>-</li>
+<li>_</li>
+<li>=</li>
+<li>+</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The space character is not allowed</p>
+</div>
+<h2 id="score-calculation">Score Calculation</h2>
+<p>The following will explain how the program should calculate a password's total score.</p>
+<h3 id="additions">Additions</h3>
+<p>If the password contains any of the following, it will recieve the configurated amount of points. By default it is 5 points.</p>
+<ul>
+<li>A Uppercase Character</li>
+<li>A Lowercase Character</li>
+<li>A Digit</li>
+<li>An Allowed Symbol</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Success</p>
+<p>If it includes <strong>all</strong> of the above, it will recieved the configured amount of points. By default it is 10 points.</p>
+</div>
+<h3 id="subtractions">Subtractions</h3>
+<p>However, if it contains only the following, it will recieve the configured amount of points. By default it is -5 points.</p>
+<ul>
+<li>Upper/Lowercase Characters</li>
+<li>Digits</li>
+<li>Allowed Symbols</li>
+<li>Consecutive (three) characters on the UK QWERTY keyboard, <strong>within the same row</strong></li>
+</ul>
+<h2 id="strength-determination">Strength Determination</h2>
+<p>To determine the strength, you must calculate the score first then you can input it within this table.</p>
+<table>
+<thead>
+<tr>
+<th>Score</th>
+<th>Strength</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=&lt; 0</td>
+<td>Weak</td>
+</tr>
+<tr>
+<td>1-20</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>21+</td>
+<td>Strong</td>
+</tr>
+</tbody>
+</table>
+                
+              
+              
+                
+
 
               
             </article>
@@ -544,6 +825,41 @@
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../menu/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Menu" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Menu
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../passwordgenerator/" class="md-footer__link md-footer__link--next" aria-label="Next: Password Generator" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Password Generator
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -564,10 +880,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.716f8af4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.716f8af4.min.js"></script>
       
     
   </body>
