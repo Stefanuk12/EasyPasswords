@@ -8,6 +8,11 @@ function CheckPassword(){
     // Get the password
     const text = question("Please input the password you wish to check: ")
 
+    // Make sure text is a valid input
+    if (!PasswordManager.Password.checkInput(text)){
+        return
+    }
+
     // Create password class
     const _Password = new PasswordManager.Password(text)
 
@@ -52,7 +57,7 @@ menu.add({
     Function: GeneratePassword
 })
 menu.add({
-    Name: "Quit",
+    Name: "Quit.",
     Description: "Quit the program",
     Function: QuitProgram
 })

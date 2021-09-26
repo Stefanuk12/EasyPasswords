@@ -73,12 +73,14 @@ export namespace PasswordManager {
         "asdfghjkl",
         "zxcvbnm"
     ]
-    const CharacterSets = {
+    const CharacterSets: {[CharacterSet: string]: string} = {
         Uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
         Lowercase: "abcdefghijklmnopqrstuvwxyz",
         Digit: "0123456789",
         Symbol: "!$%^&*()-_=+"
     }
+    const FullCharacterSet = Object.values(CharacterSets).join("")
+
     const RegexTests: IRegexTests = {
         Uppercase: /[A-Z]/,
         Lowercase: /[a-z]/,
@@ -133,6 +135,28 @@ export namespace PasswordManager {
             }
         }
     
+        // Checks whether the input has right length and no illegal characters
+        static checkInput(text: string){
+            // Vars
+            const textLength = text.length
+
+            // Check the text's length is between 8-24 characters
+            if (textLength < 8 || textLength > 24){
+                console.log("Invalid input, check the password length")
+                return false
+            }
+
+            // Check if contains any illegal characters
+            for (const character of text){
+                if (!FullCharacterSet.includes(character)){
+                    console.log("Invalid input, illegal characters")
+                    return false
+                }
+            }
+
+            //
+            return true
+        }
         // Check the strength
         check(scoreConversion: IScoreTable = Password.scoreTable){
             // Vars
