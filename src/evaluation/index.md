@@ -11,7 +11,7 @@ In addition, React would allow the program to automatically disallow the usage o
 A user using the program for the first time may not know that spaces are not allowed - for example. A help menu outlining all of the details would help the user understand the usage better.
 
 ### Limitations
-There are quite a few limitations listed by the [**Success Criteria**](../../analysis/successcriteria/passwordchecker/), like the limited 8-24 character strength. What if the user wanted a 30 character password?
+There are quite a few limitations listed by the [**Success Criteria**](../analysis/successcriteria/passwordchecker/), like the limited 8-24 character strength. What if the user wanted a 30 character password?
 
 Perhaps a better method of "scoring" a password would be better.
 
