@@ -2,7 +2,7 @@
 This task is split into three seperate "functions".
 
 ## Menu
-A simple command-line way of interacting with the program, until the user no longer wants to
+A simple command-line way of interacting with the program, until the user no longer wants to.
 
 ## Password Checker
 A password checker, based upon a score system.
