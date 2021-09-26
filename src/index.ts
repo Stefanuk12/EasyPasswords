@@ -39,6 +39,10 @@ function GeneratePassword(){
 
 // Quits the program
 function QuitProgram(){
+    // Say exit message
+    console.log("Goodbye!")
+
+    // Exit
     process.exit(1)
 }
 
