@@ -1,1 +1,1 @@
-Just a simple way of allowing the user to exit the program.
+Just a simple way of allowing the user to exit the program, saying a message before exiting.
