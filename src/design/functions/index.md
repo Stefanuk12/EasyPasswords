@@ -19,6 +19,9 @@ print(password.strength + " " + password.score)
 ### Check Input
 This would be a static member function of the class. All it will do is check against these [**Checks**](../../analysis/successcriteria/passwordchecker.md/#checks) and error if there is any failed checks.
 
+#### Return
+It would return a boolean value.
+
 ### Check
 This function would calculate the password's score and strength.
 
@@ -53,4 +56,28 @@ Firstly, we would enter an infinite loop and it would generate a random number b
 
 Then, we iterate through a range of the length, from 0. Each iteration would generate a random character that would be appended to a variable holding the generated password.
 
-After that, make sure that the password is strong. If it is, break out of the while loop.
+After that, make sure that the password is strong by calculating its score. If it is, break out of the while loop.
+
+#### Return
+It should return the password, the score, and strength within a dictionary.
+
+## Menu Class
+This class would manage how the menu is displayed to the user. It allows for an automated way of adding items to the menu easily, making this program easy to expand upon.
+
+### Constructor
+It would allow you to set the items (within the menu), if specified.
+
+### Add
+This would add an item into the menu item array.
+
+### Display
+This would iterate through each item in the menu item array, and print it out.
+
+### Prompt
+This would prompt the user to choose an option from the menu item array. It should have some failsafes to make sure the user doesn't input anything incorrectly.
+
+#### Return
+The option the user has selected
+
+### Execute
+This would prompt the user, as said above, and execute the function associated with the option.
