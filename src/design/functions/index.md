@@ -81,3 +81,12 @@ The option the user has selected
 
 ### Execute
 This would prompt the user, as said above, and execute the function associated with the option.
+
+## Index
+This is all of the functions within the main index file
+
+### Check Password
+This would prompt the user for a password to enter, making sure it is valid using the Password Input Check function. If it is not valid, it would return (the input check function would error for us). From there, it'll create a new password class where it automatically calculates the strength and score. After that, it would output the password's strength and score.
+
+### Generate Password
+Firstly, this would ask the user if they would like to use symbols in their password.
