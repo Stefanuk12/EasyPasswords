@@ -89,4 +89,7 @@ This is all of the functions within the main index file
 This would prompt the user for a password to enter, making sure it is valid using the Password Input Check function. If it is not valid, it would return (the input check function would error for us). From there, it'll create a new password class where it automatically calculates the strength and score. After that, it would output the password's strength and score.
 
 ### Generate Password
-Firstly, this would ask the user if they would like to use symbols in their password.
+Firstly, this would ask the user if they would like to use symbols in their password. After this, it would generate a password using the generate function - which is apart of the Password class. Finally, it would print out the password and the score.
+
+### Quit Program
+This is a simple function that only prints out `Goodbye!`, then exiting the process.
