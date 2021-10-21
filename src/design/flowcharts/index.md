@@ -1,3 +1,4 @@
+I will not perform flowcharts for every single function, just a couple.
 
 ## Password Class
 
