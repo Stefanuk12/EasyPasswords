@@ -35,7 +35,7 @@ After these checks, if the holder variable is `true`, it would add the corrospon
 #### Subtractions
 After adding points on, the program should remove points based upon the [**Subtraction**](../../analysis/successcriteria/passwordchecker.md/#subtractions) checks.
 
-Using the abforementioned array, we can check whether the user has inputted a password has only one criteria - e.g. only uppercase characters. If the length of the array is 1, we can get the first element, and add the corrosponding points (usually a negative number).
+Using the abforementioned array, we can check whether the user has inputted a password has only one criteria - e.g. only uppercase characters. If the length of the array is 1, we can get the first element, and add the corrosponding points (usually a negative number). However, we need to add the edge case for where it is only uppercase **and** lowercase - resulting in an array length of 2.
 
 ##### Consecutive characters
 To achieve this, we can iterate through the number of characters. From that number, we can get the next (three) characters within the password. We should have an array of each line from the UK QWERTY Keyboard. Now, loop through that array and check whether the line contains those (three) next characters we got earlier. If it does, add the corrosponding points (-10, by default).
