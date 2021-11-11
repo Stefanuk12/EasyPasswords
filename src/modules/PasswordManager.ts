@@ -185,8 +185,11 @@ export namespace PasswordManager {
             }
 
             // Check if only passes one test, and subtract how many points, depending on which
-            if (passed.length == 1){
-                score += scoreConversion[passed[0]]
+            const OnlyUpperLower = passed.length == 2 && passed.includes("Uppercase") && passed.includes("Lowercase")
+            if (passed.length == 1 || OnlyUpperLower){
+                const Type = OnlyUpperLower && "OnlyUpperLower" || `Only${passed[0]}`
+                console.log(Type, OnlyUpperLower)
+                score += scoreConversion[Type]
             }
 
             // Loop through each characters in string
