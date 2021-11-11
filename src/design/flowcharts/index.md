@@ -1,32 +1,28 @@
 I will not perform flowcharts for every single function, just a couple.
 
-!!! warning
-    In order for these to work, I need to pay $10 ([see here, mermaid.js integration](https://squidfunk.github.io/mkdocs-material/insiders/#5000-aji-panca)). This means that you may not be able to see the flowcharts currently.
-
 ## Password Class
 
 ### Constructor
 ```mermaid
 graph LR
-    A[Start] --> B{Given text?}
+    Start[Start] --> Given{Given text?};
 
-    B -->|No| C[[Generate Password]]
-    C --> Set text, strength, score
+    Given -->|No| Generate[[Generate Password]];
+    Generate --> Set[Set text, strength, score];
 
-    B --->|Yes| D[Set text]
-    D --> E[[Check Password]]
-    F --> Set score, strength
+    Given --->|Yes| SetB[Set text];
+    SetB --> Check[[Check Password]];
+    Check --> SetC[Set score, strength];
 ```
 
 ### Check Input
 ```mermaid
 graph LR
-    A[Start] --> B{Is text length between 8-24 characters}
-    B -->|No| Print out error, and return false
+    Start[Start] --> Length{Is text length between 8-24 characters?};
 
-    B --->|Yes| C{Includes illegal Characters?}
+    Length -->|No| Notify[Error, and return false];
+    Length --->|Yes| Illegal{Includes illegal characters?};
 
-    C -->|No| Print out error, and return false
-
-    C -->|Yes| Return true
+    Illegal -->|No| Return[Return true];
+    Illegal -->|Yes| Notify;
 ```
